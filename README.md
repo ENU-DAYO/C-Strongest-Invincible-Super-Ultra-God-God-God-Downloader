@@ -3,6 +3,7 @@
 このソフトは[私がもともと作っていたソフト](https://github.com/ENU-DAYO/Strongest-Invincible-Super-Ultra-God-God-God-Downloader)を作り直したものです
 ytdlpを使い動画をダウンロードしています\
 mtimeが設定出来ます
+バグがあれば[Twiiter](https://x.com/enu_daze)か[Discord](https://discord.gg/cQk5jJEQ)までお願いします
 # ダウンロード
 [ポータブル](https://github.com/ENU-DAYO/C-Strongest-Invincible-Super-Ultra-God-God-God-Downloader/releases/download/v1.0/C-Strongest-Invincible-Super-Ultra-God-God-God-Downloader-Portable.zip)または[セットアップ](https://github.com/ENU-DAYO/C-Strongest-Invincible-Super-Ultra-God-God-God-Downloader/releases/download/v1.0/C-Strongest-Invincible-Super-Ultra-God-God-God-Downloader-Setup.exe)をダウンロードして使ってください
 # 設定
