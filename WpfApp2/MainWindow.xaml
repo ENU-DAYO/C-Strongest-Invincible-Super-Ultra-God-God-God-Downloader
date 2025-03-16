@@ -1,0 +1,79 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:av="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        x:Name="window"
+        mc:Ignorable="av"
+        x:Class="WpfApp2.MainWindow"
+        Title="最強無敵スーパーウルトラ神神神ダウンローダー"
+        Height="540"
+        Width="960"
+        ResizeMode="CanMinimize">
+    <Grid x:Name="grid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="84*"/>
+            <RowDefinition Height="47*"/>
+        </Grid.RowDefinitions>
+        <!-- Frameを中央に配置 -->
+        <Frame x:Name="frame" Width="400" Height="300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,112,0,0" Grid.RowSpan="2">
+            <Frame.Content>
+                <Page Background="{DynamicResource CardBackgroundFillColorDefaultBrush}" Margin="-240,-70,-240,-70">
+                    <TextBlock FontFamily="Resources/#KOT-Eitai Gothic Bold" Margin="175,25,175,383" FontSize="24">
+                        <Run Text="最強無敵スーパーウルトラ神神神ダウンローダー"/>
+                    </TextBlock>
+                </Page>
+            </Frame.Content>
+        </Frame>
+        <TextBox x:Name="textbox_url" FontFamily="Resources/#KOT-Eitai Gothic Bold" HorizontalAlignment="Left" Margin="180,112,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="570" RenderTransformOrigin="1.097,0.158"/>
+        <TextBlock x:Name="textblox_url" FontFamily="Resources/#KOT-Eitai Gothic Bold" Margin="91,117,812,186" FontSize="18">
+            <Run Language="ja-jp" Text="URL"/>
+            <LineBreak/>
+            <Run Language="ja-jp"/>
+        </TextBlock>
+        <Button x:Name="button_paste" Content="ペースト" Margin="774,112,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.461,3.265" FontFamily="Resources/#KOT-Eitai Gothic Bold" Width="124" Cursor="Hand" Click="Button_Click"/>
+        <TextBox x:Name="textbox_path" FontFamily="Resources/#KOT-Eitai Gothic Bold" HorizontalAlignment="Left" Margin="180,168,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="570" RenderTransformOrigin="1.097,0.158"/>
+        <TextBlock x:Name="textblox_path" FontFamily="Resources/#KOT-Eitai Gothic Bold" Margin="85,169,806,135" FontSize="18">
+            <Run Language="ja-jp" Text="保存先"/>
+        </TextBlock>
+        <Button x:Name="button_browse" Content="参照" Margin="774,168,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.461,3.265" FontFamily="Resources/#KOT-Eitai Gothic Bold" Width="124" Cursor="Hand" Click="button_browse_Click"/>
+        <Button x:Name="button_download" Content="ダウンロード" Margin="0,51,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.461,3.265" FontFamily="Resources/#KOT-Eitai Gothic Bold" Width="124" Cursor="Hand" HorizontalAlignment="Center" Grid.Row="1" Click="Button_Click_1"/>
+        <TextBlock x:Name="textblox_downloadnow" FontFamily="Resources/#KOT-Eitai Gothic Bold" Margin="324,97,322,56" FontSize="14" Grid.Row="1" RenderTransformOrigin="0.479,0.609" Text="" TextAlignment="Center"/>
+        <ProgressBar x:Name="progressbar_download" Grid.Row="1" Margin="180,80,180,0" Minimum="0" Maximum="100" Value="0"/>
+        <TextBlock x:Name="textblox_format" FontFamily="Resources/#KOT-Eitai Gothic Bold" Margin="56,277,759,27" FontSize="18">
+            <Run Language="ja-jp" Text="拡張子/解像度"/>
+        </TextBlock>
+        <Expander x:Name="expander_format" Header="mp4" HorizontalAlignment="Left" Margin="405,277,0,0" VerticalAlignment="Top" Width="120" Grid.RowSpan="2" FontFamily="Resources/#KOT-Eitai Gothic Bold">
+            <StackPanel x:Name="pannel_format" Background="{DynamicResource LayerOnMicaBaseAltFillColorTertiaryBrush}">
+                <RadioButton x:Name="radiobutton_mp4" Content="mp4" IsChecked="True" Checked="FormatRadioButton_Checked"/>
+                <RadioButton x:Name="radiobutton_mp3" Content="mp3" Checked="FormatRadioButton_Checked"/>
+                <RadioButton x:Name="radiobutton_wav" Content="wav" Checked="FormatRadioButton_Checked"/>
+                <RadioButton x:Name="radiobutton_m4a" Content="m4a" Checked="FormatRadioButton_Checked"/>
+                <RadioButton x:Name="radiobutton_jpg" Content="jpg" Checked="FormatRadioButton_Checked"/>
+            </StackPanel>
+        </Expander>
+        <Expander x:Name="expander_quality" Header="最高画質" HorizontalAlignment="Left" Margin="638,277,0,0" VerticalAlignment="Top" Width="120" Grid.RowSpan="2" FontFamily="Resources/#KOT-Eitai Gothic Bold" Height="210">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" Height="140">
+                <StackPanel x:Name="pannel_quality" Background="{DynamicResource LayerOnMicaBaseAltFillColorTertiaryBrush}">
+                    <RadioButton x:Name="radiobutton_hight" Content="最高画質" IsChecked="True" Checked="FormatRadioButton_Checked"/>
+                    <RadioButton x:Name="radiobutton_4320" Content="8K" Checked="FormatRadioButton_Checked"/>
+                    <RadioButton x:Name="radiobutton_2160" Content="4K" Checked="FormatRadioButton_Checked"/>
+                    <RadioButton x:Name="radiobutton_1440" Content="2K" Checked="FormatRadioButton_Checked"/>
+                    <RadioButton x:Name="radiobutton_1080" Content="1080p" Checked="FormatRadioButton_Checked"/>
+                    <RadioButton x:Name="radiobutton_720" Content="720p" Checked="FormatRadioButton_Checked"/>
+                    <RadioButton x:Name="radiobutton_480" Content="480p" Checked="FormatRadioButton_Checked"/>
+                    <RadioButton x:Name="radiobutton_360" Content="360p" Checked="FormatRadioButton_Checked"/>
+                    <RadioButton x:Name="radiobutton_240" Content="240p" Checked="FormatRadioButton_Checked"/>
+                    <RadioButton x:Name="radiobutton_144" Content="144p" Checked="FormatRadioButton_Checked"/>
+                </StackPanel>
+            </ScrollViewer>
+        </Expander>
+        <Button x:Name="button_setting" Content="&#xE713;" Margin="872,48,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.461,3.265" Width="37" FontFamily="{StaticResource SymbolThemeFontFamily}" Cursor="Hand" Height="36" Click="button_setting_Click"/>
+        <TextBox x:Name="textbox_filename" FontFamily="Resources/#KOT-Eitai Gothic Bold" HorizontalAlignment="Left" Margin="180,219,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="570" RenderTransformOrigin="1.097,0.158"/>
+        <TextBlock x:Name="textblox_filename" FontFamily="Resources/#KOT-Eitai Gothic Bold" Margin="66,226,780,78" FontSize="18">
+            <Run Language="ja-jp" Text="ファイル名"/>
+            <LineBreak/>
+            <Run Language="ja-jp"/>
+        </TextBlock>
+        <Button x:Name="button_edit" Content="編集" Margin="774,219,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.461,3.265" FontFamily="Resources/#KOT-Eitai Gothic Bold" Width="124" Cursor="Hand" Click="button_edit_Click"/>
+    </Grid>
+</Window>

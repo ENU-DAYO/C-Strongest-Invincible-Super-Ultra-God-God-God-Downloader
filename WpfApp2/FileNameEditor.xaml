@@ -1,0 +1,31 @@
+﻿<Window x:Class="WpfApp2.FileNameEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="ファイル名編集" Height="300" Width="500"
+        ResizeMode="CanMinimize"
+        SizeToContent="Height">
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Background="{DynamicResource LayerOnMicaBaseAltFillColorTertiaryBrush}">
+            <WrapPanel x:Name="buttonPanel" Margin="0,0,0,20">
+                <Button Content="動画ID" Click="OnAddField" Tag="id" Margin="5" Cursor="Hand" FontFamily="Resources/#KOT-Eitai Gothic Bold"/>
+                <Button Content="タイトル" Click="OnAddField" Tag="title" Margin="5" Cursor="Hand" FontFamily="Resources/#KOT-Eitai Gothic Bold"/>
+                <Button Content="概要" Click="OnAddField" Tag="description" Margin="5" Cursor="Hand" FontFamily="Resources/#KOT-Eitai Gothic Bold"/>
+                <Button Content="プレイリストの名前" Click="OnAddField" Tag="playlist_title" Margin="5" Cursor="Hand" FontFamily="Resources/#KOT-Eitai Gothic Bold"/>
+                <Button Content="プレリストの番号" Click="OnAddField" Tag="playlist_index" Margin="5" Cursor="Hand" FontFamily="Resources/#KOT-Eitai Gothic Bold"/>
+                <Button Content="拡張子" Click="OnAddField" Tag="ext" Margin="5" Cursor="Hand" FontFamily="Resources/#KOT-Eitai Gothic Bold"/>
+                <Button Content="FPS" Click="OnAddField" Tag="fps" Margin="5" Cursor="Hand" FontFamily="Resources/#KOT-Eitai Gothic Bold"/>
+                <Button Content="動画の幅" Click="OnAddField" Tag="width" Margin="5" Cursor="Hand" FontFamily="Resources/#KOT-Eitai Gothic Bold"/>
+                <Button Content="動画の高さ" Click="OnAddField" Tag="height" Margin="5" Cursor="Hand" FontFamily="Resources/#KOT-Eitai Gothic Bold"/>
+                <Button Content="サイト名" Click="OnAddField" Tag="webpage_url_domain" Margin="5" Cursor="Hand" FontFamily="Resources/#KOT-Eitai Gothic Bold"/>
+                <Button Content="投稿日" Click="OnAddField" Tag="upload_date" Margin="5" Cursor="Hand" FontFamily="Resources/#KOT-Eitai Gothic Bold"/>
+                <Button Content="投稿者" Click="OnAddField" Tag="uploader" Margin="5" Cursor="Hand" FontFamily="Resources/#KOT-Eitai Gothic Bold"/>
+                <Button Content="投稿者のID" Click="OnAddField" Tag="uploader_id" Margin="5" Cursor="Hand" FontFamily="Resources/#KOT-Eitai Gothic Bold"/>
+            </WrapPanel>
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Center" Margin="0,0,0,20" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontFamily="Resources/#KOT-Eitai Gothic Bold"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,33 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:av="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="av" x:Class="WpfApp2.SettingWindow"
+        Title="設定ウィンドウ" Height="350" Width="525"
+        ResizeMode="CanMinimize"
+        Closing="Window_Closing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="142.04" />
+            <RowDefinition Height="144.92"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <CheckBox x:Name="EmbedThumbnailCheckBox" Content="サムネイルを埋め込む" IsChecked="True" VerticalAlignment="Top" Margin="10,39,0,0"  FontFamily="Resources/#KOT-Eitai Gothic Bold"/>
+        <CheckBox x:Name="EmbedMetadataCheckBox" Content="メタデータを埋め込む" IsChecked="True" Margin="10,71,0,0" VerticalAlignment="Top" FontFamily="Resources/#KOT-Eitai Gothic Bold" />
+        <RadioButton x:Name="TimeMtime" Content="mtime" GroupName="TimeSettings" Margin="10,131,0,0" VerticalAlignment="Top" Cursor="Hand" Grid.RowSpan="2"  FontFamily="Resources/#KOT-Eitai Gothic Bold"/>
+        <RadioButton x:Name="TimeNomtime" Content="nomtime" GroupName="TimeSettings" IsChecked="True" Margin="10,21,0,0" VerticalAlignment="Top" Grid.Row="1" Cursor="Hand"  FontFamily="Resources/#KOT-Eitai Gothic Bold"/>
+        <CheckBox x:Name="NoLogCheckBox" Content="ログを残さない" Margin="10,100,0,0" VerticalAlignment="Top"  FontFamily="Resources/#KOT-Eitai Gothic Bold"/>
+        <Button Content="保存" Click="SaveButton_Click" Grid.Row="1" Margin="449,25,0,0" VerticalAlignment="Top" Cursor="Hand"  FontFamily="Resources/#KOT-Eitai Gothic Bold"/>
+        <Expander Header="Cookie設定" Grid.Row="0" Grid.RowSpan="4" VerticalAlignment="Top"  FontFamily="Resources/#KOT-Eitai Gothic Bold">
+            <StackPanel Background="{DynamicResource LayerOnMicaBaseAltFillColorTertiaryBrush}" Margin="-6,-10,-5,0" >
+                <RadioButton x:Name="CookieNone" Content="なし" GroupName="Cookies" Cursor="Hand"/>
+                <RadioButton x:Name="CookieChrome" Content="Chrome" GroupName="Cookies" Cursor="Hand"/>
+                <RadioButton x:Name="CookieEdge" Content="Edge" GroupName="Cookies" Cursor="Hand"/>
+                <RadioButton x:Name="CookieFireFox" Content="FireFox"  GroupName="Cookies" Cursor="Hand"/>
+                <RadioButton x:Name="CookieBrave" Content="Brave"  GroupName="Cookies" Cursor="Hand"/>
+                <RadioButton x:Name="CookieVivaldi" Content="Vivaldi"  GroupName="Cookies" Cursor="Hand"/>
+                <RadioButton x:Name="CookieOpera" Content="Opera"  GroupName="Cookies" Cursor="Hand"/>
+            </StackPanel>
+        </Expander>
+    </Grid>
+</Window>
