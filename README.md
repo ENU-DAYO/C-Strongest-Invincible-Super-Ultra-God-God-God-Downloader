@@ -1,7 +1,7 @@
 # このソフトについて
 ![Image](https://github.com/user-attachments/assets/cf565437-846a-476f-9137-9171ab825e0e)\
 このソフトは[私がもともと作っていたソフト](https://github.com/ENU-DAYO/Strongest-Invincible-Super-Ultra-God-God-God-Downloader)を作り直したものです
-ytdlpを使い動画をダウンロードしています
+ytdlpを使い動画をダウンロードしています\
 mtimeが設定出来ます
 # ダウンロード
 [ポータブル](https://github.com/ENU-DAYO/C-Strongest-Invincible-Super-Ultra-God-God-God-Downloader/releases/download/v1.0/C-Strongest-Invincible-Super-Ultra-God-God-God-Downloader-Portable.zip)または[セットアップ](https://github.com/ENU-DAYO/C-Strongest-Invincible-Super-Ultra-God-God-God-Downloader/releases/download/v1.0/C-Strongest-Invincible-Super-Ultra-God-God-God-Downloader-Setup.exe)をダウンロードして使ってください
